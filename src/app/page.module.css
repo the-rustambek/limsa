@@ -173,7 +173,6 @@
 
 /* Advantages */
 
-
 .advantages_wrapper {
     display: flex;
     flex-direction: column;
@@ -192,23 +191,22 @@
     color: var(--black);
     margin-top: 24px;
     text-align: center;
-}
 
+}
 .advantages_text_sm {
     font-size: 16px;
     font-weight: 700;
     color: var(--gray-second);
     text-align: center;
-    text-transform: uppercase;
 }
 
 .advantages_text {
+
     font-size: 14px;
     font-weight: 500;
     margin: 24px 0 16px 0;
     text-align: center;
 }
-
 /* Feedbacks */
 
 .feedbacks_text_wrapper {

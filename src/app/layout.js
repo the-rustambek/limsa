@@ -5,7 +5,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Limsa",
-  description: "Limsa",
+  description: "LIMSA - SIZNING BIZNESINGIZNI RIVOJLANTIRISH UCHUN MUKAMMAL 'IT' YECHIMLAR!. Web-sayt, internet-magazin, dasturlash, sayt, mobil ilovalar, innovatsiya, sayt yaratish, telegram bot yaratish, CRM, ichki boshqaruv tizim, biznesingiz uchun IT xizmatlari ",
 };
 
 export default function RootLayout({ children }) {

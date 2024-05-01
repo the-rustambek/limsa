@@ -14,6 +14,7 @@ const Carousel = () => {
   return (
     <Swiper
       slidesPerView={1}
+
       spaceBetween={30}
       freeMode={true}
       pagination={{
