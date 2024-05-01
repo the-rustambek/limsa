@@ -57,7 +57,11 @@ const Header = () => {
               Eng
             </option>
           </select>
-          <button className={styles.header_button}>Contact with us</button>
+          <Link href={"tel:+998935138813"}>
+            <button className={styles.header_button}>
+              +998 (93) 513-88-33
+            </button>
+          </Link>
         </div>
       </div>
     </div>

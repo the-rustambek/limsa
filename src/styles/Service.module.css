@@ -15,8 +15,13 @@
     column-gap: 70px;
 }
 
+.image_container {
+    width: 100%;
+}
+
 .image {
     width: 100%;
+    object-fit: cover;
     margin-bottom: 40px;
 }
 
@@ -52,12 +57,13 @@
     transition: all 0.5s ease;
     font-weight: 700;
     font-size: 16px;
-    color: var(--light-purple);
+    color: var(--white);
+    background-color: var(--light-purple);
 
     &:hover {
-        border: 1px solid var(--white);
-        background-color: var(--light-purple);
-        color: var(--white);
+        border: 1px solid var(--light-purple);
+        background-color: var(--white);
+        color: var(--light-purple);
     }
 }
 

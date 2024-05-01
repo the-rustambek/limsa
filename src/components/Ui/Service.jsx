@@ -10,7 +10,7 @@ const Service = () => {
   return (
     <div className={styles.service_container}>
       <div className={styles.service_card}>
-        <div>
+        <div className={styles.image_container}>
           <img
             src={service1.src}
             className={styles.image}
@@ -51,7 +51,7 @@ const Service = () => {
         </div>
       </div>
       <div className={styles.service_card}>
-        <div>
+        <div className={styles.image_container}>
           <img
             src={mApps.src}
             className={styles.image}
@@ -92,7 +92,7 @@ const Service = () => {
         </div>
       </div>
       <div className={styles.service_card}>
-        <div>
+        <div className={styles.image_container}>
           <img
             src={tgBots.src}
             className={styles.image}
@@ -133,7 +133,7 @@ const Service = () => {
         </div>
       </div>
       <div className={styles.service_card}>
-        <div>
+        <div className={styles.image_container}>
           <img
             src={service1.src}
             className={styles.image}
