@@ -1,0 +1,78 @@
+:root {
+  --black-purple: #302A4C;
+  --dark-purple: #561689;
+  --light-purple: #6C2DBA;
+  --white-purple: #F0D4FF;
+  --white: #FFFFFF;
+  --black: #000000;
+  --gray: #60697B;
+  --gray-second: #AAB0BC;
+}
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  padding: 0;
+  margin: 0;
+}
+
+main {
+  margin-top: 84px;
+}
+
+.container {
+  max-width: 100%;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.logo_card {
+  filter: grayscale(100%);
+  transition: all 0.3s ease;
+  cursor: pointer;
+
+  &:hover {
+    filter: grayscale(0);
+  }
+}
+
+.swiper {
+  margin: 40px 0;
+  width: 100% !important;
+  height: 360px !important;
+}
+
+.swiper-slide {
+  height: fit-content !important;
+  padding: 40px;
+  background: var(--black-purple);
+  border-radius: 8px;
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--light-purple) !important;
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
