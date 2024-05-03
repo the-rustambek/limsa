@@ -20,6 +20,10 @@ main {
   margin-top: 84px;
 }
 
+a {
+  text-decoration: none;
+}
+
 .container {
   max-width: 100%;
   padding: 0 20px;
@@ -43,6 +47,7 @@ main {
 }
 
 .swiper-slide {
+  min-height: 320px !important;
   height: fit-content !important;
   padding: 40px;
   background: var(--black-purple);

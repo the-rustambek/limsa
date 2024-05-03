@@ -49,7 +49,7 @@ const Footer = () => {
               style={{ fontSize: "24px", color: "#6C2DBA" }}
             />
             <div>
-              <h3 className={styles.item_title}>{t("social")}</h3>
+              <h3 className={styles.item_title}>{t("footer:social")}</h3>
               <div className={styles.social}>
                 <Link
                   href={"https://www.linkedin.com/company/limsa-2021/"} aria-label="Linkedin"
@@ -91,7 +91,7 @@ const Footer = () => {
           width={150}
           height={35}
         />
-        <p className={styles.copy_text}>{t("copy")}</p>
+        <p className={styles.copy_text}>{t("footer:copy")}</p>
         <div></div>
       </div>
     </div>

@@ -245,6 +245,13 @@
     margin: 0 auto;
 }
 
+.formM {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    padding-top: 20px;
+}
+
 .inputs {
     display: flex;
     flex-direction: column;

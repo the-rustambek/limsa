@@ -7,6 +7,7 @@ import tgBots from "/public/telegram_bots.png";
 import styles from "@/srcstyles/Service.module.css";
 import { FaCheck } from "react-icons/fa6";
 import { useTranslation } from "react-i18next";
+import Link from "next/link";
 
 const Service = () => {
   const {t} = useTranslation();
@@ -26,31 +27,25 @@ const Service = () => {
           <h3 className={styles.service_card_title}>{t("websites")}</h3>
           <ul className={styles.service_text_list}>
             <li className={styles.list_item}>
-              <FaCheck style={{ fontSize: "20px", width:20, height:20 }} />
-              <p className={styles.service_card_text}>
-                {t("webText1")}
-              </p>
+              <FaCheck style={{ fontSize: "20px", width: 20, height: 20 }} />
+              <p className={styles.service_card_text}>{t("webText1")}</p>
             </li>
             <li className={styles.list_item}>
-              <FaCheck style={{ fontSize: "20px", width:20, height:20 }} />
-              <p className={styles.service_card_text}>
-                {t("webText2")}
-              </p>
+              <FaCheck style={{ fontSize: "20px", width: 20, height: 20 }} />
+              <p className={styles.service_card_text}>{t("webText2")}</p>
             </li>
             <li className={styles.list_item}>
-              <FaCheck style={{ fontSize: "20px", width:20, height:20 }} />
-              <p className={styles.service_card_text}>
-                {t("webText3")}
-              </p>
+              <FaCheck style={{ fontSize: "20px", width: 20, height: 20 }} />
+              <p className={styles.service_card_text}>{t("webText3")}</p>
             </li>
             <li className={styles.list_item}>
-              <FaCheck style={{ fontSize: "20px", width:20, height:20 }} />
-              <p className={styles.service_card_text}>
-                {t("webText4")}
-              </p>
+              <FaCheck style={{ fontSize: "20px", width: 20, height: 20 }} />
+              <p className={styles.service_card_text}>{t("webText4")}</p>
             </li>
           </ul>
-          <button className={styles.contact_button}>Call now</button>
+          <Link href="#contact">
+             <button className={styles.contact_button}>{t("call")}</button>
+          </Link>
         </div>
       </div>
       <div className={styles.service_card}>
@@ -74,8 +69,9 @@ const Service = () => {
               <p className={styles.service_card_text}>IOS</p>
             </li>
           </ul>
-          <button className={styles.contact_button}>Call now</button>
-        </div>
+          <Link href="#contact">
+             <button className={styles.contact_button}>{t("call")}</button>
+          </Link>        </div>
       </div>
       <div className={styles.service_card}>
         <div className={styles.image_container}>
@@ -91,31 +87,24 @@ const Service = () => {
           <ul className={styles.service_text_list}>
             <li className={styles.list_item}>
               <FaCheck style={{ fontSize: "20px" }} />
-              <p className={styles.service_card_text}>
-                {t("botText1")}
-              </p>
+              <p className={styles.service_card_text}>{t("botText1")}</p>
             </li>
             <li className={styles.list_item}>
               <FaCheck style={{ fontSize: "20px" }} />
-              <p className={styles.service_card_text}>
-                {t("botText2")}
-              </p>
+              <p className={styles.service_card_text}>{t("botText2")}</p>
             </li>
             <li className={styles.list_item}>
               <FaCheck style={{ fontSize: "20px" }} />
-              <p className={styles.service_card_text}>
-                {t("botText3")}
-              </p>
+              <p className={styles.service_card_text}>{t("botText3")}</p>
             </li>
             <li className={styles.list_item}>
               <FaCheck style={{ fontSize: "20px" }} />
-              <p className={styles.service_card_text}>
-                {t("botText4")}
-              </p>
+              <p className={styles.service_card_text}>{t("botText4")}</p>
             </li>
           </ul>
-          <button className={styles.contact_button}>Call now</button>
-        </div>
+          <Link href="#contact">
+             <button className={styles.contact_button}>{t("call")}</button>
+          </Link>        </div>
       </div>
       <div className={styles.service_card}>
         <div className={styles.image_container}>
@@ -139,17 +128,16 @@ const Service = () => {
             </li>
             <li className={styles.list_item}>
               <FaCheck style={{ fontSize: "20px" }} />
-              <p className={styles.service_card_text}>
-                {t("graphicDesText3")}
-              </p>
+              <p className={styles.service_card_text}>{t("graphicDesText3")}</p>
             </li>
             <li className={styles.list_item}>
               <FaCheck style={{ fontSize: "20px" }} />
               <p className={styles.service_card_text}>{t("graphicDesText4")}</p>
             </li>
           </ul>
-          <button className={styles.contact_button}>Call now</button>
-        </div>
+          <Link href="#contact">
+             <button className={styles.contact_button}>{t("call")}</button>
+          </Link>        </div>
       </div>
     </div>
   );
