@@ -33,6 +33,7 @@ const i18namespaces = ["main", "header", "footer"]
 
 export default async function Home({ params: { locale } }) {
   const { t, resources } = await initTranslations(locale, i18namespaces);
+
   return (
     <TranslationsProvider resources={resources} locale={locale} namespaces={i18namespaces}>
       <header className={styles.header}>
