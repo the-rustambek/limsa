@@ -11,7 +11,7 @@ import avtozoomWeb from "/public/avtozoomWebsite.jpg";
 import dezinfection from "/public/desinfection.jpg";
 import homekit from "/public/homekit.jpg";
 import itTime from "/public/itTime.jpg";
-import loyalWebsite from "/public/loyalWebsite.jpg"
+import loyalWebsite from "/public/loyalWebsite.jpg";
 import noits from "/public/noits.jpg";
 import propartnyor from "/public/propartnyor.jpg";
 import zamonTour from "/public/zamonTour.jpg";
@@ -28,14 +28,19 @@ import initTranslations from "../i18n";
 import TranslationsProvider from "@/srccomponents/TranslationsProvider";
 import IntroText from "@/srccomponents/Ui/IntroText";
 import ModalForm from "@/srccomponents/Ui/Modal";
+import ContactForm from "@/srccomponents/Ui/ContactForm";
 
-const i18namespaces = ["main", "header", "footer"]
+const i18namespaces = ["main", "header", "footer"];
 
 export default async function Home({ params: { locale } }) {
   const { t, resources } = await initTranslations(locale, i18namespaces);
 
   return (
-    <TranslationsProvider resources={resources} locale={locale} namespaces={i18namespaces}>
+    <TranslationsProvider
+      resources={resources}
+      locale={locale}
+      namespaces={i18namespaces}
+    >
       <header className={styles.header}>
         <Header />
       </header>
@@ -44,40 +49,70 @@ export default async function Home({ params: { locale } }) {
           <div className={`container ${styles.about_wrapper}`}>
             <div className={styles.texts}>
               <IntroText />
-              <article className={styles.article}>
-                {t("text")}
-              </article>
+              <article className={styles.article}>{t("text")}</article>
               <ModalForm />
             </div>
             <div className={styles.images_container}>
               <div className={styles.image_column}>
                 <div className={styles.image_wrapper1}>
-                  <img src={abBuild.src} style={{ width: 180, border: "1px solid #6C2DBA" }} alt="Image" />
+                  <img
+                    src={abBuild.src}
+                    style={{ width: 180, border: "1px solid #6C2DBA" }}
+                    alt="Image"
+                  />
                 </div>
                 <div className={styles.image_wrapper1}>
-                  <img src={homekit.src} style={{ width: 200, border: "1px solid #6C2DBA" }} alt="Image" />
+                  <img
+                    src={homekit.src}
+                    style={{ width: 200, border: "1px solid #6C2DBA" }}
+                    alt="Image"
+                  />
                 </div>
                 <div className={styles.image_wrapper1}>
-                  <img src={itTime.src} style={{ width: 180, border: "1px solid #6C2DBA" }} alt="Image" />
+                  <img
+                    src={itTime.src}
+                    style={{ width: 180, border: "1px solid #6C2DBA" }}
+                    alt="Image"
+                  />
                 </div>
               </div>
               <div className={styles.image_column}>
                 <div className={styles.image_wrapper2}>
-                  <img src={loyalWebsite.src} style={{ width: 200, border: "1px solid #6C2DBA" }} alt="Image" />
+                  <img
+                    src={loyalWebsite.src}
+                    style={{ width: 200, border: "1px solid #6C2DBA" }}
+                    alt="Image"
+                  />
                 </div>
                 <div className={styles.image_wrapper2}>
-                  <img src={avtozoomWeb.src} style={{ width: 200, border: "1px solid #6C2DBA" }} alt="Image" />
+                  <img
+                    src={avtozoomWeb.src}
+                    style={{ width: 200, border: "1px solid #6C2DBA" }}
+                    alt="Image"
+                  />
                 </div>
                 <div className={styles.image_wrapper2}>
-                  <img src={noits.src} style={{ width: 200, border: "1px solid #6C2DBA" }} alt="Image" />
+                  <img
+                    src={noits.src}
+                    style={{ width: 200, border: "1px solid #6C2DBA" }}
+                    alt="Image"
+                  />
                 </div>
               </div>
               <div className={styles.image_column}>
                 <div className={styles.image_wrapper2}>
-                  <img src={zamonTour.src} style={{ width: 180, border: "1px solid #6C2DBA" }} alt="Image" />
+                  <img
+                    src={zamonTour.src}
+                    style={{ width: 180, border: "1px solid #6C2DBA" }}
+                    alt="Image"
+                  />
                 </div>
                 <div className={styles.image_wrapper2}>
-                  <img src={propartnyor.src} style={{ width: 200, border: "1px solid #6C2DBA" }} alt="Image" />
+                  <img
+                    src={propartnyor.src}
+                    style={{ width: 200, border: "1px solid #6C2DBA" }}
+                    alt="Image"
+                  />
                 </div>
               </div>
             </div>
@@ -85,10 +120,12 @@ export default async function Home({ params: { locale } }) {
         </section>
         <section id="partners">
           <div className={`container ${styles.partners_wrapper}`}>
-            <Image src="/Limsa - Logotype 2.png"
+            <Image
+              src="/Limsa - Logotype 2.png"
               alt="Limsa Logo"
               width={250}
-              height={60} />
+              height={60}
+            />
             <h2 className={styles.partners_title}>{t("partners_title")}</h2>
 
             <div className={styles.counter}>
@@ -111,14 +148,32 @@ export default async function Home({ params: { locale } }) {
             <h2 className={styles.projects_text_lg}>{t("we_did")}</h2>
 
             <div className={styles.projects_wrapper}>
-              <Websites image={abBuild} link={"https://www.ataevbahodirbuild.uz/"} />
-              <Websites image={avtozoomWeb} link={"https://www.autozoomrental.com"} />
-              <Websites image={dezinfection} link={"https://www.dezinfeksiyatashkent.uz/"} />
-              <Websites image={homekit} link={"https://www.https://www.homekit.uz/"} />
-              <Websites image={itTime} link={"https://www.it-time-academy.uz"} />
+              <Websites
+                image={abBuild}
+                link={"https://www.ataevbahodirbuild.uz/"}
+              />
+              <Websites
+                image={avtozoomWeb}
+                link={"https://www.autozoomrental.com"}
+              />
+              <Websites
+                image={dezinfection}
+                link={"https://www.dezinfeksiyatashkent.uz/"}
+              />
+              <Websites
+                image={homekit}
+                link={"https://www.https://www.homekit.uz/"}
+              />
+              <Websites
+                image={itTime}
+                link={"https://www.it-time-academy.uz"}
+              />
               <Websites image={loyalWebsite} link={"https://www.uzloyal.uz"} />
               <Websites image={noits} link={"https://www.namanganoits.uz/"} />
-              <Websites image={propartnyor} link={"https://www.propartnyor.uz"} />
+              <Websites
+                image={propartnyor}
+                link={"https://www.propartnyor.uz"}
+              />
               <Websites image={zamonTour} link={"https://www.zamontour.uz"} />
             </div>
           </div>
@@ -133,7 +188,11 @@ export default async function Home({ params: { locale } }) {
           <div className="container">
             <div className={styles.advantages_wrapper}>
               <div>
-                <img src={responsiveImage.src} className={styles.adv_image} alt="Image" />
+                <img
+                  src={responsiveImage.src}
+                  className={styles.adv_image}
+                  alt="Image"
+                />
               </div>
               <div>
                 <p className={styles.advantages_text_sm}>{t("responsive")}</p>
@@ -146,10 +205,10 @@ export default async function Home({ params: { locale } }) {
         <section id="feedbacks">
           <div className="container">
             <div className={styles.feedbacks_text_wrapper}>
-              <VscFeedback style={{ fontSize: "52px", color: "#561689", marginBottom: 20 }} />
-              <h2 className={styles.feedbacks_title}>
-                {t("feedbackTitle")}
-              </h2>
+              <VscFeedback
+                style={{ fontSize: "52px", color: "#561689", marginBottom: 20 }}
+              />
+              <h2 className={styles.feedbacks_title}>{t("feedbackTitle")}</h2>
               <Carousel />
             </div>
           </div>
@@ -157,27 +216,8 @@ export default async function Home({ params: { locale } }) {
         <section id="contact">
           <div className="container">
             <h2 className={styles.contact_title}>{t("contactTitle")}</h2>
-            <p className={styles.contact_title2}>
-              {t("contactText")}
-            </p>
-            <form className={styles.form}>
-              <div className={styles.inputs}>
-                <input className={styles.inputText} placeholder={t("name")} type="text" required />
-                <input className={styles.inputText} placeholder="+998" type="tel" required />
-              </div>
-              <textarea
-                required
-                maxLength={2000}
-                placeholder={t("textarea")}
-                className={styles.textarea}
-              >
-              </textarea>
-              <div style={{ display: "flex", justifyContent: "center", marginTop: "40px", marginBottom: "50px" }}>
-                <button className={styles.contact_button}>
-                  {t("button")}
-                </button>
-              </div>
-            </form>
+            <p className={styles.contact_title2}>{t("contactText")}</p>
+            <ContactForm />
           </div>
         </section>
       </main>
@@ -185,6 +225,5 @@ export default async function Home({ params: { locale } }) {
         <Footer />
       </footer>
     </TranslationsProvider>
-
   );
 }

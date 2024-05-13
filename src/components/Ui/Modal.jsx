@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import styles from "@/srcapp/[locale]/page.module.css";
 import { useTranslation } from "react-i18next";
-import { Modal, message } from "antd";
+import { Modal } from "antd";
 import { SendData } from "@/srcservice/axios";
 
 const ModalForm = () => {
@@ -34,6 +34,9 @@ const ModalForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const data = `Name: ${formData.name}; PhoneNumber: ${formData.phone}; Message: ${formData.message}`;
+    formData.name = "";
+    formData.phone = "";
+    formData.message = "";
     SendData(data);
   };
 
