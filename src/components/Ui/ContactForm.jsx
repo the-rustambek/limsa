@@ -33,7 +33,7 @@ const ContactForm = () => {
   return (
     <form className={styles.form} onSubmit={handleSubmit}>
       <div className={styles.inputs}>
-        <label htmlFor="name" style={{ width: "50%" }}>
+        <label htmlFor="name" className={styles.label}>
           <input
             className={styles.inputText}
             placeholder={t("name")}
@@ -44,7 +44,7 @@ const ContactForm = () => {
             required
           />
         </label>
-        <label htmlFor="phone" style={{ width: "50%" }}>
+        <label htmlFor="phone" className={styles.label}>
           <input
             className={styles.inputText}
             placeholder="+998"
