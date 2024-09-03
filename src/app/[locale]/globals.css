@@ -1,12 +1,12 @@
 :root {
-  --black-purple: #302A4C;
+  --black-purple: #302a4c;
   --dark-purple: #561689;
-  --light-purple: #6C2DBA;
-  --white-purple: #F0D4FF;
-  --white: #FFFFFF;
+  --light-purple: #6c2dba;
+  --white-purple: #f0d4ff;
+  --white: #ffffff;
   --black: #000000;
-  --gray: #60697B;
-  --gray-second: #AAB0BC;
+  --gray: #60697b;
+  --gray-second: #aab0bc;
   --red: #ff0000;
 }
 
@@ -57,6 +57,31 @@ a {
 
 .swiper-pagination-bullet-active {
   background: var(--light-purple) !important;
+}
+
+.iti {
+  width: 100%;
+}
+
+.iti__selected-dial-code {
+  font-size: 16px;
+  line-height: normal;
+  color: var(--gray);
+}
+
+.iti__tel-input {
+  width: 100%;
+  padding: 12px 20px;
+  border-radius: 12px;
+  border: 2px solid var(--gray);
+  font-size: 16px;
+  color: var(--gray);
+  transition: all 0.1s ease;
+}
+
+.iti__tel-input:focus {
+  border: 2px solid var(--light-purple);
+  outline: none;
 }
 
 @media (min-width: 640px) {

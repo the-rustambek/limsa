@@ -82,6 +82,7 @@
   font-weight: 700;
   font-size: 16px;
   color: var(--light-purple);
+  background: var(--white);
 
   &:hover {
     border: 1px solid var(--white);

@@ -4,14 +4,18 @@ import React, { useState } from "react";
 import styles from "@/srcapp/[locale]/page.module.css";
 import { useTranslation } from "react-i18next";
 import { SendData } from "@/srcservice/axios";
+import IntlTelInput from "intl-tel-input/reactWithUtils";
+import "intl-tel-input/styles";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
     name: "",
-    phone: "",
     message: "",
   });
   const { t } = useTranslation();
+  let [number, setNumber] = useState();
+  const [isValid, setIsValid] = useState();
+  const countries = ["uz", "ru", "kg", "kz", "tj"];
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -23,9 +27,9 @@ const ContactForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const data = `Name: ${formData.name}; PhoneNumber: ${formData.phone}; Message: ${formData.message}`;
+    const data = `Name: ${formData.name}; PhoneNumber: ${number}; Message: ${formData.message}`;
     formData.name = "";
-    formData.phone = "";
+    number = "";
     formData.message = "";
     SendData(data);
   };
@@ -45,14 +49,16 @@ const ContactForm = () => {
           />
         </label>
         <label htmlFor="phone" className={styles.label}>
-          <input
-            className={styles.inputText}
-            placeholder="+998"
-            type="tel"
-            name="phone"
-            value={formData.phone}
-            onChange={handleChange}
-            required
+          <IntlTelInput
+            onChangeNumber={setNumber}
+            onChangeValidity={setIsValid}
+            initOptions={{
+              separateDialCode: true,
+              autoPlaceholder: "off",
+              strictMode: true,
+              initialCountry: "uz",
+              countryOrder: countries,
+            }}
           />
         </label>
       </div>
