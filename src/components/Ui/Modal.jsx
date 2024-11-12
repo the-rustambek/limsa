@@ -5,19 +5,18 @@ import styles from "@/srcapp/[locale]/page.module.css";
 import { useTranslation } from "react-i18next";
 import { Modal } from "antd";
 import { SendData } from "@/srcservice/axios";
-import IntlTelInput from "intl-tel-input/reactWithUtils";
-import "intl-tel-input/styles";
+import 'react-phone-number-input/style.css';
+import PhoneInput from 'react-phone-number-input';
 
 const ModalForm = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
+    phone: "",
     message: "",
   });
   const { t } = useTranslation();
-  let [number, setNumber] = useState();
-  const [isValid, setIsValid] = useState();
-  const countries = ["uz", "ru", "kg", "kz", "tj"];
+  let [phoneNumber, setPhoneNumber] = useState()
 
   const showDrawer = () => {
     setModalOpen(true);
@@ -37,9 +36,9 @@ const ModalForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const data = `Name: ${formData.name}; PhoneNumber: ${formData.phone}; Message: ${formData.message}`;
+    const data = `Name: ${formData.name}; PhoneNumber: ${phoneNumber}; Message: ${formData.message}`;
     formData.name = "";
-    number = "";
+    phoneNumber = "";
     formData.message = "";
     SendData(data);
   };
@@ -52,7 +51,7 @@ const ModalForm = () => {
       <Modal
         title={t("contactTitle")}
         centered
-        visible={modalOpen}
+        open={modalOpen}
         onCancel={onClose}
         footer={false}
       >
@@ -69,26 +68,23 @@ const ModalForm = () => {
             />
           </label>
           <label htmlFor="phone">
-            <IntlTelInput
-              onChangeNumber={setNumber}
-              onChangeValidity={setIsValid}
-              initOptions={{
-                separateDialCode: true,
-                autoPlaceholder: "off",
-                strictMode: true,
-                initialCountry: "uz",
-                countryOrder: countries,
-              }}
-            />
+          <PhoneInput 
+             className={styles.inputText}
+             placeholder="Enter phone number"
+             defaultCountry="UZ"
+             value={phoneNumber} 
+             onChange={setPhoneNumber}
+             required
+          />
           </label>
           <textarea
-            required
             maxLength={2000}
             placeholder={t("textarea")}
             className={styles.textarea}
             name="message"
             value={formData.message}
             onChange={handleChange}
+            required
           ></textarea>
           <div
             style={{
